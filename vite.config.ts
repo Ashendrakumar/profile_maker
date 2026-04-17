@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig(({ mode }) => ({
-  base: "/",
+  base: process.env.VITE_BASE_PATH || "/profile-maker",
   server: {
     host: "::",
     port: 8080,
