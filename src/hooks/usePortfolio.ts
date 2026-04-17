@@ -6,18 +6,7 @@ const getData = async (
   codedUserDetail: string,
 ): Promise<typeof portfolioData> => {
   try {
-    const codedId = codedUserDetail.split("-")[1],
-      codedName = codedUserDetail.split("-")[0];
-    // const userId = decryptID(codedId);
-    // const response = await new Promise((resolve, reject) =>
-    //     setTimeout(() => {
-    //         if (userId === "1234567890") {
-    //             return resolve(portfolioData);
-    //         } else {
-    //             reject(new Error("User not found with ID " + userId));
-    //         }
-    //     }, 5000),
-    // );
+    const codedId = codedUserDetail.split("-")[1];
     const response = await fetch(`${API_URL}/portfolio/${codedId}`, {
       method: "GET",
       cache: "force-cache",
