@@ -1,0 +1,663 @@
+{
+    "appSlug": "ashendra",
+    "projectNavbarData": {
+        "projectName": "IFour",
+        "projectOptionName": "Technolab",
+        "profileImage": "/assets/img/profile-pic.jpg",
+        "projectNavLink": [
+            {
+                "label": "About",
+                "url": "/about"
+            },
+            {
+                "label": "Projects",
+                "url": "/projects"
+            },
+            {
+                "label": "Contact",
+                "url": "/contact"
+            },
+            {
+                "label": "Experience",
+                "url": "/experience"
+            }
+        ]
+    },
+    "contactData": {
+        "title": "Contact",
+        "sub_title": "Get in touch with me , I'm always open to discussing products, creative ideas or opportunities to be part of your visions.",
+        "fName": "Ashendrakumar",
+        "lName": "Pal",
+        "role": "Software Engineer",
+        "contact": [
+            {
+                "title": "Address",
+                "displayName": "Thaltej Ahmedabad, Gujarat",
+                "link": "https://www.google.com/maps/place/Thaltej,+Ahmedabad,+Gujarat/@23.0584766,72.5051197,14z/data=!3m1!4b1!4m6!3m5!1s0x395e9ca1402b2107:0xc6b7cfd374cb4bcb!8m2!3d23.0504131!4d72.4990891!16zL20vMGY2Zmd3?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D",
+                "icon": "fa-map-marker-alt"
+            },
+            {
+                "title": "Contact",
+                "displayName": "+917768865045",
+                "link": "tel:+917768865045",
+                "icon": "fa fa-mobile"
+            },
+            {
+                "title": "Email",
+                "displayName": "ashendrakumarpal@gmail.com",
+                "link": "mailto:ashendrakumarpal@gmail.com",
+                "icon": "fa fa-envelope"
+            }
+        ],
+        "contactFormSection": {
+            "title": "Contact me for any query",
+            "image": "/assets/img/contact-section.jpeg",
+            "sub_title": "Get in touch with me , I'm always open to discussing products, creative ideas or opportunities to be part of your visions."
+        }
+    },
+    "aboutData": {
+        "title": "About",
+        "description": "Passionate web developer with strong expertise in HTML, CSS, and SASS. Proficient in TypeScript, React, JavaScript, along with extensive experience in the Angular framework (Angular 2+). I specialize in building scalable and maintainable applications using TypeScript and have a deep understanding of state management through NgRx. My technical abilities also include integrating RESTful APIs, ensuring responsive design across devices, and maintaining cross-browser compatibility.\n\nI thrive on writing clean, efficient code and staying current with the latest industry trends. My collaborative nature, problem-solving mindset, and strong dedication to teamwork enable me to deliver high-quality solutions. I am confident that my technical expertise and proactive approach make me a valuable asset to any development team.",
+        "sub-description": "As an Angular Developer with one year of dedicated experience, I have honed my skills in crafting interactive and user-centric web applications. My journey began with a strong foundation in Angular, and over the course of a year, I have successfully contributed to the development of responsive and dynamic front-end solutions. I am excited to contribute my skills to a team that values creativity, teamwork, and the pursuit of excellence in web development. I look forward to leveraging my foundation and enthusiasm to make a positive impact on projects that push the boundaries of what Angular can achieve.",
+        "image": "/assets/img/profile-pic.jpg",
+        "more-info": "Read More",
+        "more_details": {
+            "organizations": [
+                {
+                    "name": "Airport",
+                    "code": "AAI",
+                    "from": "2021",
+                    "to": "2022",
+                    "image": "./assets/images/about.jpg",
+                    "link": "https://www.ashendra.com/"
+                },
+                {
+                    "name": "Sapphire",
+                    "code": "Sapphire",
+                    "from": "2022",
+                    "to": "2023",
+                    "image": "./assets/images/about.jpg",
+                    "link": "https://www.ashendra.com/"
+                },
+                {
+                    "name": "Swan",
+                    "code": "Swan",
+                    "from": "2022",
+                    "to": "present",
+                    "image": "./assets/images/about.jpg",
+                    "link": "https://www.ashendra.com/"
+                }
+            ],
+            "projects": [
+                {
+                    "projectImg": "../../../assets/img/projects/vidyalaya.png",
+                    "projectOrg": "Sapphire",
+                    "projectLink": "#",
+                    "name": "Vidyalaya",
+                    "projectHeading": "Vidyalaya",
+                    "projectRole": "Angular Developer",
+                    "teamMembers": "15",
+                    "projectDetail": {
+                        "description": "Our Edutech Application is a comprehensive platform designed specifically for schools, streamlining administrative tasks, facilitating teacher-student collaboration, and enhancing the learning experience. The application integrates modern education technologies to help schools manage their operations efficiently while providing students and educators with an innovative, user-friendly digital learning environment.",
+                        "keyFeatures": [
+                            {
+                                "title": "Student Information System (SIS)",
+                                "description": "Manage student data, track attendance, grades, and academic performance seamlessly in one place."
+                            },
+                            {
+                                "title": "Classroom Management",
+                                "description": "Teachers can create and manage lesson plans, assignments, and schedules. Interactive features include student engagement tracking, live quizzes, and real-time feedback."
+                            },
+                            {
+                                "title": "Parent-Teacher Communication",
+                                "description": "Parents can access their child's academic records, monitor progress, and communicate with teachers through secure messaging."
+                            },
+                            {
+                                "title": "E-Learning Platform",
+                                "description": "Virtual classrooms with video conferencing, lecture recordings, and multimedia content support for remote learning, ensuring flexibility and continuity in education."
+                            },
+                            {
+                                "title": "Exam and Assignment Management",
+                                "description": "Automate exams, grading, and assignment submissions with a robust assessment tool that offers real-time results and analytics for teachers."
+                            },
+                            {
+                                "title": "Library and Resource Management",
+                                "description": "Digitize the school's library with features to browse, borrow, and return books. Teachers can upload resources for students to access online."
+                            },
+                            {
+                                "title": "Mobile-Friendly Design",
+                                "description": "Responsive across all devices, ensuring students and staff can access the platform from smartphones, tablets, or desktops, promoting accessibility and ease of use."
+                            }
+                        ],
+                        "technologiesUsed": {
+                            "frontend": "Angular (TypeScript, HTML, CSS)",
+                            "backend": "Node.js (RESTful APIs)",
+                            "database": "MongoDB",
+                            "deployment": "Docker, AWS",
+                            "versionControl": "Git, GitHub",
+                            "stateManagement": "NgRx",
+                            "uiUxTools": "Figma for wireframing, Adobe XD for prototyping"
+                        },
+                        "challengesSolved": [
+                            {
+                                "challenge": "Implemented a dynamic and flexible user interface to accommodate different user roles (teachers, students, parents, and administrators)."
+                            },
+                            {
+                                "challenge": "Integrated real-time notifications for parents, teachers, and students about upcoming events, assignments, and attendance."
+                            },
+                            {
+                                "challenge": "Ensured cross-browser compatibility and high performance even under heavy usage by a large number of students and staff."
+                            }
+                        ],
+                        "outcome": "The application has successfully enhanced classroom engagement, simplified administrative processes, and improved the overall communication between schools, students, and parents. Schools utilizing this platform report improved efficiency and higher student performance, thanks to the data-driven insights provided by the system."
+                    }
+                },
+                {
+                    "projectImg": "../../../assets/img/projects/audit.jpg",
+                    "projectOrg": "Sapphire",
+                    "projectLink": "#",
+                    "name": "Auditor",
+                    "projectHeading": "Auditor Pass",
+                    "projectRole": "Angular front-end Developer",
+                    "teamMembers": "3",
+                    "projectDetail": {
+                        "description": "Our Edutech Application is a comprehensive platform designed specifically for schools, streamlining administrative tasks, facilitating teacher-student collaboration, and enhancing the learning experience. The application integrates modern education technologies to help schools manage their operations efficiently while providing students and educators with an innovative, user-friendly digital learning environment.",
+                        "keyFeature": [
+                            {
+                                "title": "Student Information System (SIS)",
+                                "description": "Manage student data, track attendance, grades, and academic performance seamlessly in one place."
+                            },
+                            {
+                                "title": "Classroom Management",
+                                "description": "Teachers can create and manage lesson plans, assignments, and schedules. Interactive features include student engagement tracking, live quizzes, and real-time feedback."
+                            },
+                            {
+                                "title": "Parent-Teacher Communication",
+                                "description": "Parents can access their child's academic records, monitor progress, and communicate with teachers through secure messaging."
+                            },
+                            {
+                                "title": "E-Learning Platform",
+                                "description": "Virtual classrooms with video conferencing, lecture recordings, and multimedia content support for remote learning, ensuring flexibility and continuity in education."
+                            },
+                            {
+                                "title": "Exam and Assignment Management",
+                                "description": "Automate exams, grading, and assignment submissions with a robust assessment tool that offers real-time results and analytics for teachers."
+                            },
+                            {
+                                "title": "Library and Resource Management",
+                                "description": "Digitize the school's library with features to browse, borrow, and return books. Teachers can upload resources for students to access online."
+                            },
+                            {
+                                "title": "Mobile-Friendly Design",
+                                "description": "Responsive across all devices, ensuring students and staff can access the platform from smartphones, tablets, or desktops, promoting accessibility and ease of use."
+                            }
+                        ],
+                        "technologiesUsed": {
+                            "frontend": "Angular (TypeScript, HTML, CSS)",
+                            "backend": "Node.js (RESTful APIs)",
+                            "database": "MongoDB",
+                            "deployment": "Docker, AWS",
+                            "versionControl": "Git, GitHub",
+                            "stateManagement": "NgRx",
+                            "uiUxTools": "Figma for wireframing, Adobe XD for prototyping"
+                        },
+                        "challengesSolved": [
+                            {
+                                "challenge": "Implemented a dynamic and flexible user interface to accommodate different user roles (teachers, students, parents, and administrators)."
+                            },
+                            {
+                                "challenge": "Integrated real-time notifications for parents, teachers, and students about upcoming events, assignments, and attendance."
+                            },
+                            {
+                                "challenge": "Ensured cross-browser compatibility and high performance even under heavy usage by a large number of students and staff."
+                            }
+                        ],
+                        "outcome": "The application has successfully enhanced classroom engagement, simplified administrative processes, and improved the overall communication between schools, students, and parents. Schools utilizing this platform report improved efficiency and higher student performance, thanks to the data-driven insights provided by the system."
+                    }
+                },
+                {
+                    "projectImg": "../../../assets/img/projects/lubi-crm.jpg",
+                    "projectOrg": "Swan",
+                    "projectLink": "#",
+                    "name": "Lubi",
+                    "projectHeading": "Lubi pumps CRM",
+                    "projectRole": "Angular Developer",
+                    "teamMembers": "2",
+                    "projectDetail": {
+                        "description": "Our Edutech Application is a comprehensive platform designed specifically for schools, streamlining administrative tasks, facilitating teacher-student collaboration, and enhancing the learning experience. The application integrates modern education technologies to help schools manage their operations efficiently while providing students and educators with an innovative, user-friendly digital learning environment.",
+                        "keyFeature": [
+                            {
+                                "title": "Student Information System (SIS)",
+                                "description": "Manage student data, track attendance, grades, and academic performance seamlessly in one place."
+                            },
+                            {
+                                "title": "Classroom Management",
+                                "description": "Teachers can create and manage lesson plans, assignments, and schedules. Interactive features include student engagement tracking, live quizzes, and real-time feedback."
+                            },
+                            {
+                                "title": "Parent-Teacher Communication",
+                                "description": "Parents can access their child's academic records, monitor progress, and communicate with teachers through secure messaging."
+                            },
+                            {
+                                "title": "E-Learning Platform",
+                                "description": "Virtual classrooms with video conferencing, lecture recordings, and multimedia content support for remote learning, ensuring flexibility and continuity in education."
+                            },
+                            {
+                                "title": "Exam and Assignment Management",
+                                "description": "Automate exams, grading, and assignment submissions with a robust assessment tool that offers real-time results and analytics for teachers."
+                            },
+                            {
+                                "title": "Library and Resource Management",
+                                "description": "Digitize the school's library with features to browse, borrow, and return books. Teachers can upload resources for students to access online."
+                            },
+                            {
+                                "title": "Mobile-Friendly Design",
+                                "description": "Responsive across all devices, ensuring students and staff can access the platform from smartphones, tablets, or desktops, promoting accessibility and ease of use."
+                            }
+                        ],
+                        "technologiesUsed": {
+                            "frontend": "Angular (TypeScript, HTML, CSS)",
+                            "backend": "Node.js (RESTful APIs)",
+                            "database": "MongoDB",
+                            "deployment": "Docker, AWS",
+                            "versionControl": "Git, GitHub",
+                            "stateManagement": "NgRx",
+                            "uiUxTools": "Figma for wireframing, Adobe XD for prototyping"
+                        },
+                        "challengesSolved": [
+                            {
+                                "challenge": "Implemented a dynamic and flexible user interface to accommodate different user roles (teachers, students, parents, and administrators)."
+                            },
+                            {
+                                "challenge": "Integrated real-time notifications for parents, teachers, and students about upcoming events, assignments, and attendance."
+                            },
+                            {
+                                "challenge": "Ensured cross-browser compatibility and high performance even under heavy usage by a large number of students and staff."
+                            }
+                        ],
+                        "outcome": "The application has successfully enhanced classroom engagement, simplified administrative processes, and improved the overall communication between schools, students, and parents. Schools utilizing this platform report improved efficiency and higher student performance, thanks to the data-driven insights provided by the system."
+                    }
+                },
+                {
+                    "projectImg": "../../../assets/img/projects/naturalfooring.jpg",
+                    "projectOrg": "Swan",
+                    "projectLink": "#",
+                    "name": "Natural",
+                    "projectHeading": "Natural Flooring",
+                    "projectRole": "Front-end Developer",
+                    "teamMembers": "4",
+                    "projectDetail": {
+                        "description": "Our Edutech Application is a comprehensive platform designed specifically for schools, streamlining administrative tasks, facilitating teacher-student collaboration, and enhancing the learning experience. The application integrates modern education technologies to help schools manage their operations efficiently while providing students and educators with an innovative, user-friendly digital learning environment.",
+                        "keyFeature": [
+                            {
+                                "title": "Student Information System (SIS)",
+                                "description": "Manage student data, track attendance, grades, and academic performance seamlessly in one place."
+                            },
+                            {
+                                "title": "Classroom Management",
+                                "description": "Teachers can create and manage lesson plans, assignments, and schedules. Interactive features include student engagement tracking, live quizzes, and real-time feedback."
+                            },
+                            {
+                                "title": "Parent-Teacher Communication",
+                                "description": "Parents can access their child's academic records, monitor progress, and communicate with teachers through secure messaging."
+                            },
+                            {
+                                "title": "E-Learning Platform",
+                                "description": "Virtual classrooms with video conferencing, lecture recordings, and multimedia content support for remote learning, ensuring flexibility and continuity in education."
+                            },
+                            {
+                                "title": "Exam and Assignment Management",
+                                "description": "Automate exams, grading, and assignment submissions with a robust assessment tool that offers real-time results and analytics for teachers."
+                            },
+                            {
+                                "title": "Library and Resource Management",
+                                "description": "Digitize the school's library with features to browse, borrow, and return books. Teachers can upload resources for students to access online."
+                            },
+                            {
+                                "title": "Mobile-Friendly Design",
+                                "description": "Responsive across all devices, ensuring students and staff can access the platform from smartphones, tablets, or desktops, promoting accessibility and ease of use."
+                            }
+                        ],
+                        "technologiesUsed": {
+                            "frontend": "Angular (TypeScript, HTML, CSS)",
+                            "backend": "Node.js (RESTful APIs)",
+                            "database": "MongoDB",
+                            "deployment": "Docker, AWS",
+                            "versionControl": "Git, GitHub",
+                            "stateManagement": "NgRx",
+                            "uiUxTools": "Figma for wireframing, Adobe XD for prototyping"
+                        },
+                        "challengesSolved": [
+                            {
+                                "challenge": "Implemented a dynamic and flexible user interface to accommodate different user roles (teachers, students, parents, and administrators)."
+                            },
+                            {
+                                "challenge": "Integrated real-time notifications for parents, teachers, and students about upcoming events, assignments, and attendance."
+                            },
+                            {
+                                "challenge": "Ensured cross-browser compatibility and high performance even under heavy usage by a large number of students and staff."
+                            }
+                        ],
+                        "outcome": "The application has successfully enhanced classroom engagement, simplified administrative processes, and improved the overall communication between schools, students, and parents. Schools utilizing this platform report improved efficiency and higher student performance, thanks to the data-driven insights provided by the system."
+                    }
+                },
+                {
+                    "projectImg": "../../../assets/img/projects/wireframe.jpg",
+                    "projectOrg": "Swan",
+                    "projectLink": "#",
+                    "name": "Frame",
+                    "projectHeading": "Frame work design",
+                    "projectRole": "Frame work designer",
+                    "teamMembers": "2",
+                    "projectDetail": {
+                        "description": "Our Edutech Application is a comprehensive platform designed specifically for schools, streamlining administrative tasks, facilitating teacher-student collaboration, and enhancing the learning experience. The application integrates modern education technologies to help schools manage their operations efficiently while providing students and educators with an innovative, user-friendly digital learning environment.",
+                        "keyFeature": [
+                            {
+                                "title": "Student Information System (SIS)",
+                                "description": "Manage student data, track attendance, grades, and academic performance seamlessly in one place."
+                            },
+                            {
+                                "title": "Classroom Management",
+                                "description": "Teachers can create and manage lesson plans, assignments, and schedules. Interactive features include student engagement tracking, live quizzes, and real-time feedback."
+                            },
+                            {
+                                "title": "Parent-Teacher Communication",
+                                "description": "Parents can access their child's academic records, monitor progress, and communicate with teachers through secure messaging."
+                            },
+                            {
+                                "title": "E-Learning Platform",
+                                "description": "Virtual classrooms with video conferencing, lecture recordings, and multimedia content support for remote learning, ensuring flexibility and continuity in education."
+                            },
+                            {
+                                "title": "Exam and Assignment Management",
+                                "description": "Automate exams, grading, and assignment submissions with a robust assessment tool that offers real-time results and analytics for teachers."
+                            },
+                            {
+                                "title": "Library and Resource Management",
+                                "description": "Digitize the school's library with features to browse, borrow, and return books. Teachers can upload resources for students to access online."
+                            },
+                            {
+                                "title": "Mobile-Friendly Design",
+                                "description": "Responsive across all devices, ensuring students and staff can access the platform from smartphones, tablets, or desktops, promoting accessibility and ease of use."
+                            }
+                        ],
+                        "technologiesUsed": {
+                            "frontend": "Angular (TypeScript, HTML, CSS)",
+                            "backend": "Node.js (RESTful APIs)",
+                            "database": "MongoDB",
+                            "deployment": "Docker, AWS",
+                            "versionControl": "Git, GitHub",
+                            "stateManagement": "NgRx",
+                            "uiUxTools": "Figma for wireframing, Adobe XD for prototyping"
+                        },
+                        "challengesSolved": [
+                            {
+                                "challenge": "Implemented a dynamic and flexible user interface to accommodate different user roles (teachers, students, parents, and administrators)."
+                            },
+                            {
+                                "challenge": "Integrated real-time notifications for parents, teachers, and students about upcoming events, assignments, and attendance."
+                            },
+                            {
+                                "challenge": "Ensured cross-browser compatibility and high performance even under heavy usage by a large number of students and staff."
+                            }
+                        ],
+                        "outcome": "The application has successfully enhanced classroom engagement, simplified administrative processes, and improved the overall communication between schools, students, and parents. Schools utilizing this platform report improved efficiency and higher student performance, thanks to the data-driven insights provided by the system."
+                    }
+                },
+                {
+                    "projectImg": "../../../assets/img/projects/Sourcecorrect.jpg",
+                    "projectOrg": "Swan",
+                    "projectLink": "#",
+                    "name": "Source",
+                    "projectHeading": "Source correct",
+                    "projectRole": "Angular Developer",
+                    "teamMembers": "2",
+                    "projectDetail": {
+                        "description": "Our Edutech Application is a comprehensive platform designed specifically for schools, streamlining administrative tasks, facilitating teacher-student collaboration, and enhancing the learning experience. The application integrates modern education technologies to help schools manage their operations efficiently while providing students and educators with an innovative, user-friendly digital learning environment.",
+                        "keyFeature": [
+                            {
+                                "title": "Student Information System (SIS)",
+                                "description": "Manage student data, track attendance, grades, and academic performance seamlessly in one place."
+                            },
+                            {
+                                "title": "Classroom Management",
+                                "description": "Teachers can create and manage lesson plans, assignments, and schedules. Interactive features include student engagement tracking, live quizzes, and real-time feedback."
+                            },
+                            {
+                                "title": "Parent-Teacher Communication",
+                                "description": "Parents can access their child's academic records, monitor progress, and communicate with teachers through secure messaging."
+                            },
+                            {
+                                "title": "E-Learning Platform",
+                                "description": "Virtual classrooms with video conferencing, lecture recordings, and multimedia content support for remote learning, ensuring flexibility and continuity in education."
+                            },
+                            {
+                                "title": "Exam and Assignment Management",
+                                "description": "Automate exams, grading, and assignment submissions with a robust assessment tool that offers real-time results and analytics for teachers."
+                            },
+                            {
+                                "title": "Library and Resource Management",
+                                "description": "Digitize the school's library with features to browse, borrow, and return books. Teachers can upload resources for students to access online."
+                            },
+                            {
+                                "title": "Mobile-Friendly Design",
+                                "description": "Responsive across all devices, ensuring students and staff can access the platform from smartphones, tablets, or desktops, promoting accessibility and ease of use."
+                            }
+                        ],
+                        "technologiesUsed": {
+                            "frontend": "Angular (TypeScript, HTML, CSS)",
+                            "backend": "Node.js (RESTful APIs)",
+                            "database": "MongoDB",
+                            "deployment": "Docker, AWS",
+                            "versionControl": "Git, GitHub",
+                            "stateManagement": "NgRx",
+                            "uiUxTools": "Figma for wireframing, Adobe XD for prototyping"
+                        },
+                        "challengesSolved": [
+                            {
+                                "challenge": "Implemented a dynamic and flexible user interface to accommodate different user roles (teachers, students, parents, and administrators)."
+                            },
+                            {
+                                "challenge": "Integrated real-time notifications for parents, teachers, and students about upcoming events, assignments, and attendance."
+                            },
+                            {
+                                "challenge": "Ensured cross-browser compatibility and high performance even under heavy usage by a large number of students and staff."
+                            }
+                        ],
+                        "outcome": "The application has successfully enhanced classroom engagement, simplified administrative processes, and improved the overall communication between schools, students, and parents. Schools utilizing this platform report improved efficiency and higher student performance, thanks to the data-driven insights provided by the system."
+                    }
+                }
+            ]
+        }
+    },
+    "resumeData": {
+        "resumeLink": "../../../assets/resume/Ashendrakumar_pal_resume.pdf",
+        "downloadLink": "../../../assets/resume/Ashendrakumar_pal_resume.pdf",
+        "downloadText": "Download Resume",
+        "downloadIcon": "fa fa-download",
+        "resumeName": "Ashendra-Resume",
+        "resumeHeading": "Resume",
+        "educationData": {
+            "title": "Education",
+            "sub_title": "My Education",
+            "educationItems": [
+                {
+                    "title": "Bachelor of Engineering",
+                    "institution": "Priyadarshini Bhagwati College of Engineering",
+                    "date": "2015 - 2019",
+                    "location": "Nagpur, Maharashtra, India",
+                    "details": "Mechanical Engineering",
+                    "percentage": "80%"
+                },
+                {
+                    "title": "Higher Secondary School",
+                    "institution": "Prerna junior college",
+                    "date": "2014 - 2015",
+                    "location": "Nagpur, Maharashtra, India",
+                    "details": "",
+                    "percentage": "78%"
+                },
+                {
+                    "title": "High School",
+                    "institution": "Shreemati Janki Devi Jaiswal Vidhyalaya",
+                    "date": "2012 - 2013",
+                    "location": "Nagpur, Maharashtra, India",
+                    "details": "",
+                    "percentage": "85.27%"
+                }
+            ]
+        },
+        "experienceData": {
+            "title": "Experience",
+            "sub_title": "My Experience",
+            "experienceItems": [
+                {
+                    "jobRole": "Angular Developer",
+                    "org_title": "Swan Softweb solutions pvt. ltd.",
+                    "orgLogo": "../../../assets/img/swan.png",
+                    "org_link": "https://swansoftweb.com/",
+                    "date": "November 2023 - Present",
+                    "location": "Ahmedabad, Gujarat, India",
+                    "projectsHandled": "5"
+                },
+                {
+                    "jobRole": "Software Engineer Trainee",
+                    "org_title": "Sapphire Software solutions",
+                    "orgLogo": "../../../assets/img/swan.png",
+                    "org_link": "https://swansoftweb.com/",
+                    "date": "July 2022 - November 2022",
+                    "location": "Ahmedabad, Gujarat, India",
+                    "projectsHandled": "5"
+                },
+                {
+                    "jobRole": "Apprentice Trainee",
+                    "org_title": "Airport Authority of India",
+                    "orgLogo": "../../../assets/img/swan.png",
+                    "org_link": "https://swansoftweb.com/",
+                    "date": "April 2021 - April 2022",
+                    "location": "Jamnagar, Gujarat, India",
+                    "projectsHandled": "5"
+                }
+            ]
+        },
+        "skillsData": {
+            "title": "Technical Skills",
+            "sub_title": "My Skills",
+            "skillItems": [
+                {
+                    "name": "Angular",
+                    "icon": "fa-brands fa-angular",
+                    "level": "95"
+                },
+                {
+                    "name": "React",
+                    "icon": "fa-brands fa-react",
+                    "level": "85"
+                },
+                {
+                    "name": "Github",
+                    "icon": "fa-brands fa-github",
+                    "level": "90"
+                },
+                {
+                    "name": "Jira",
+                    "icon": "fa-brands fa-atlassian",
+                    "level": "90"
+                },
+                {
+                    "name": "Javascript",
+                    "icon": "fa-brands fa-js",
+                    "level": "85"
+                },
+                {
+                    "name": "HTML",
+                    "icon": "fa-brands fa-html5",
+                    "level": "100"
+                },
+                {
+                    "name": "CSS",
+                    "icon": "fa-brands fa-css3",
+                    "level": "100"
+                },
+                {
+                    "name": "Django",
+                    "icon": "devicon-django-plain",
+                    "level": "50"
+                },
+                {
+                    "name": "JQuery",
+                    "icon": "devicon-jquery-plain",
+                    "level": "70"
+                },
+                {
+                    "name": "Typescript",
+                    "icon": "devicon-typescript-plain",
+                    "level": "85"
+                },
+                {
+                    "name": "Firebase",
+                    "icon": "devicon-firebase-plain",
+                    "level": "80"
+                },
+                {
+                    "name": "Balsamiq",
+                    "icon": "devicon-balsamiq-plain",
+                    "level": "70"
+                }
+            ]
+        }
+    },
+    "footerData": {
+        "footerText": "Copyright © 2022. All Rights Reserved.",
+        "footerLinks": [
+            {
+                "label": "Home",
+                "url": "/"
+            },
+            {
+                "label": "About",
+                "url": "/about"
+            },
+            {
+                "label": "Contact",
+                "url": "/contact"
+            },
+            {
+                "label": "Resume",
+                "url": "/resume"
+            }
+        ]
+    },
+    "socialLinks": [
+        {
+            "name": "Facebook",
+            "link": "https://www.facebook.com",
+            "icon": "fab fa-facebook-f",
+            "color": "#3b5998"
+        },
+        {
+            "name": "Twitter",
+            "link": "https://www.twitter.com",
+            "icon": "fab fa-twitter",
+            "color": "#1da1f2"
+        },
+        {
+            "name": "Instagram",
+            "link": "https://www.instagram.com",
+            "icon": "fab fa-instagram",
+            "color": "#e1306c"
+        },
+        {
+            "name": "LinkedIn",
+            "link": "https://www.linkedin.com/in/ashendrakumar-pal-9a3825208",
+            "icon": "fab fa-linkedin-in",
+            "color": "#0077b5"
+        },
+        {
+            "name": "GitHub",
+            "link": "https://github.com/Ashendrakumar?tab=repositories",
+            "icon": "fab fa-github",
+            "color": "#333"
+        }
+    ]
+}
