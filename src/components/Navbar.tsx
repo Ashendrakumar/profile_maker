@@ -21,13 +21,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-saas-black bg-opacity-90 backdrop-blur-sm sticky top-0 z-50 border-b border-saas-darkGray">
+    <nav className="bg-gradient-to-b from-slate-950 via-emerald-950/20 to-slate-950 bg-opacity-95 backdrop-blur-md sticky top-0 z-50 border-b border-emerald-900/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-saas-orange to-amber-500 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent hover:from-emerald-300 hover:to-cyan-400 transition-all duration-300">
                 {projectNavbarData.projectName}{" "}
                 {projectNavbarData.projectOptionName}
               </span>
@@ -39,7 +39,7 @@ const Navbar = () => {
             <div className="flex items-center space-x-4">
               <a
                 href="#"
-                className="px-3 py-2 text-sm font-medium transition-colors text-white hover:text-saas-orange"
+                className="px-3 py-2 text-sm font-medium transition-all duration-300 text-white hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg"
                 onClick={(e) => {
                   e.preventDefault();
                   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -53,7 +53,7 @@ const Navbar = () => {
                   <a
                     key={index}
                     href={targetId}
-                    className="px-3 py-2 text-sm font-medium transition-colors text-white hover:text-saas-orange"
+                    className="px-3 py-2 text-sm font-medium transition-all duration-300 text-white hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg"
                   >
                     {link.label}
                   </a>
@@ -69,7 +69,7 @@ const Navbar = () => {
               download={portfolioData.resumeData.resumeName}
               target="_blank"
               rel="noreferrer"
-              className="btn-primary"
+              className="px-6 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-500 hover:to-teal-500 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 border border-emerald-400/30 hover:border-emerald-400"
             >
               <i
                 className={`${portfolioData.resumeData.downloadIcon} mr-2`}
@@ -96,11 +96,11 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-saas-darkGray pb-4">
+        <div className="md:hidden bg-gradient-to-b from-slate-900/80 to-emerald-900/20 backdrop-blur-md pb-4 border-t border-emerald-900/30">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a
               href="#"
-              className="block px-3 py-2 text-base font-medium text-white hover:text-saas-orange"
+              className="block px-3 py-2 text-base font-medium text-white hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition-all duration-300"
               onClick={(e) => {
                 e.preventDefault();
                 setIsOpen(false);
@@ -115,7 +115,7 @@ const Navbar = () => {
                 <a
                   key={index}
                   href={targetId}
-                  className="block px-3 py-2 text-base font-medium text-white hover:text-saas-orange"
+                  className="block px-3 py-2 text-base font-medium text-white hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition-all duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
@@ -128,7 +128,7 @@ const Navbar = () => {
                 download={portfolioData.resumeData.resumeName}
                 target="_blank"
                 rel="noreferrer"
-                className="btn-primary w-full inline-block text-center"
+                className="w-full inline-block text-center px-6 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-500 hover:to-teal-500 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 border border-emerald-400/30 hover:border-emerald-400"
               >
                 <i
                   className={`${portfolioData.resumeData.downloadIcon} mr-2`}

@@ -14,7 +14,7 @@ import ExperienceSection from "@/components/ExperienceSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-saas-black text-white">
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 to-emerald-950/10 text-white">
       <Navbar />
       <main>
         <HeroSection />

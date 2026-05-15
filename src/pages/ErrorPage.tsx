@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 const ErrorPage = ({ error }: { error?: string }) => {
 
   return (
-    <div className="container bg-saas-black  min-h-screen flex flex-col items-center justify-center text-white">
-      <h1 className="text-4xl text-center text-saas-orange font-bold mb-4">{error ? error : 'User Not Found'}</h1>
+    <div className="container bg-gradient-to-b from-slate-950 via-emerald-950/20 to-slate-950 min-h-screen flex flex-col items-center justify-center text-white">
+      <h1 className="text-4xl text-center text-emerald-400 font-bold mb-4">{error ? error : 'User Not Found'}</h1>
       <p className="text-gray-400 text-center">
         {
           'The requested portfolio URL is invalid or expired.'
@@ -13,7 +13,7 @@ const ErrorPage = ({ error }: { error?: string }) => {
         <Button
           asChild
           variant="outline"
-          className="border-saas-orange text-saas-orange hover:bg-saas-orange hover:text-white"
+          className="border-2 border-emerald-500/50 text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-400 transition-all duration-300"
         >
           <a
             href="https://profile-manager-front-end.onrender.com/login"

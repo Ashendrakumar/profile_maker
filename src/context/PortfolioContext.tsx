@@ -3,7 +3,6 @@ import mockData from "../ashendra.json";
 import PortfolioLoader from "@/components/ui/PortfolioLoader";
 import ErrorPage from "@/pages/ErrorPage";
 import { getData } from "@/hooks/usePortfolio";
-import { encryptID, decryptID } from '@/hooks/useCrypto'
 
 type PortfolioContextType = {
   data: typeof mockData | null;
@@ -71,18 +70,14 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({
 
     // ✅ Case 4: New ID OR no data → fetch
     fetchUserData(codedUserId);
-
   }, [window.location.pathname]);
-
 
   if (loading) {
     return <PortfolioLoader />;
   }
 
   if (error) {
-    return (
-      <ErrorPage error={error} />
-    );
+    return <ErrorPage error={error} />;
   }
 
   return (
