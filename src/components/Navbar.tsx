@@ -27,9 +27,9 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent hover:from-emerald-300 hover:to-cyan-400 transition-all duration-300">
+              <span className="text-2xl uppercase font-bold bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent hover:from-emerald-300 hover:to-cyan-400 transition-all duration-300">
                 {projectNavbarData.projectName}{" "}
-                {projectNavbarData.projectOptionName}
+                {/* {projectNavbarData.projectOptionName} */}
               </span>
             </Link>
           </div>
@@ -37,16 +37,6 @@ const Navbar = () => {
           {/* Desktop menu */}
           <div className="hidden md:block">
             <div className="flex items-center space-x-4">
-              <a
-                href="#"
-                className="px-3 py-2 text-sm font-medium transition-all duration-300 text-white hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              >
-                Home
-              </a>
               {projectNavbarData.projectNavLink.map((link, index) => {
                 const targetId = link.url.replace("/", "#");
                 return (
@@ -96,19 +86,8 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-gradient-to-b from-slate-900/80 to-emerald-900/20 backdrop-blur-md pb-4 border-t border-emerald-900/30">
+        <div className="md:hidden bg-gradient-to-b from-slate-900/80 to-emerald-900/20 backdrop-blur-md pb-4 border-t border-emerald-900/30 ">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a
-              href="#"
-              className="block px-3 py-2 text-base font-medium text-white hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition-all duration-300"
-              onClick={(e) => {
-                e.preventDefault();
-                setIsOpen(false);
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-            >
-              Home
-            </a>
             {projectNavbarData.projectNavLink.map((link, index) => {
               const targetId = link.url.replace("/", "#");
               return (

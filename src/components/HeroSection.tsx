@@ -23,7 +23,8 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           <div className="animate-fade-in order-2 lg:order-1 text-center lg:text-left">
             <span className="inline-block bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-emerald-500/30 hover:border-emerald-400/70 hover:bg-emerald-500/20 transition-all duration-300">
-              Hello I'm {contactData.fName} {contactData.lName}
+              Hello I'm <span className="uppercase">{contactData.fName}</span>{" "}
+              {contactData.lName}
             </span>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
@@ -34,26 +35,34 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-lg md:text-xl mb-8 text-gray-300 max-w-2xl mx-auto lg:mx-0">
-              {aboutData.description.substring(0, 150)}...
+              {aboutData.description && (
+                <>
+                  {aboutData.description.substring(0, 150)}
+                  {aboutData.description.length > 150 && "..."}
+                </>
+              )}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button
                 asChild
-                className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/20 border border-emerald-400/30 hover:border-emerald-400 hover:-translate-y-0.5"
+                className="bg-gradient-to-r md:w-1/2 w-full from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/20 border border-emerald-400/30 hover:border-emerald-400 hover:-translate-y-0.5"
               >
-                <Link to="/contact">
+                <a href={"#contact"} className="flex items-center">
                   Hire Me
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+                </a>
               </Button>
-              <Button
+              {/* <Button
                 asChild
                 variant="outline"
-                className="border-2 border-emerald-500/50 text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-400 transition-all duration-300"
+                className="border-2 md:w-1/2 w-full border-emerald-500/50 text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-400 transition-all duration-300"
               >
-                <Link to="/about">More About Me</Link>
-              </Button>
+                <a href={"#about"} className="flex items-center">
+                  More About Me
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button> */}
             </div>
 
             <div className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-4">

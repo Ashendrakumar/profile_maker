@@ -16,7 +16,7 @@ const ProjectsSection = () => {
       <div className="section-container border-t border-emerald-900/30 pt-16">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            My <span className="gradient-text">Projects</span>
+            <span className="gradient-text"> My Projects</span>
           </h2>
           <p className="text-gray-400 mb-8">
             Check out some of the work I've done.
@@ -35,7 +35,7 @@ const ProjectsSection = () => {
                 {project.projectHeading}
               </h3>
               <p className="text-sm text-emerald-400 mb-4 group-hover:text-cyan-300 transition-colors duration-300 relative z-10 font-medium">
-                {project.projectRole} at {project.projectOrg}
+                {project.projectRole} @ {project.projectOrg}
               </p>
               <p className="text-gray-400 mb-6 flex-grow text-sm line-clamp-3 group-hover:text-gray-300 transition-colors duration-300 relative z-10">
                 {project.projectDetail.description}

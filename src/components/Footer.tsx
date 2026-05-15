@@ -21,9 +21,8 @@ const Footer = () => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
             >
-              <span className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent hover:from-emerald-300 hover:to-cyan-400 transition-all duration-300">
+              <span className="uppercase text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent hover:from-emerald-300 hover:to-cyan-400 transition-all duration-300">
                 {projectNavbarData.projectName}{" "}
-                {projectNavbarData.projectOptionName}
               </span>
             </a>
           </div>
