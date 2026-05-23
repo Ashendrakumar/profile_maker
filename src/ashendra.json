@@ -97,7 +97,7 @@
         "downloadIcon": "fa fa-download",
         "resumeName": "Ashendra-Resume",
         "resumeHeading": "Resume",
-        "projectsData": {
+        "projectData": {
             "title": "Projects",
             "sub_title": "My Projects",
             "projects": [

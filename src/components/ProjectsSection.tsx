@@ -7,7 +7,7 @@ import AppCard from "./common/AppCard";
 const ProjectsSection = () => {
   const { data: portfolioData } = usePortfolio();
   if (!portfolioData) return null;
-  const { projects, title, sub_title } = portfolioData.resumeData.projectsData;
+  const { projects, title, sub_title } = portfolioData.resumeData.projectData;
 
   return (
     <div
