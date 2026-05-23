@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { usePortfolio } from "@/context/PortfolioContext";
+import SocialMedia from "./common/SocialMedia";
 
 const Footer = () => {
   const { data } = usePortfolio();
@@ -46,16 +47,7 @@ const Footer = () => {
           {/* Social */}
           <div className="flex space-x-4">
             {socialLinks.map((social, idx) => (
-              <a
-                key={idx}
-                href={social.link}
-                target="_blank"
-                rel="noreferrer"
-                className="text-gray-400 hover:text-emerald-400 transition-all duration-300 w-10 h-10 flex items-center justify-center rounded-full border border-emerald-500/30 hover:border-emerald-400/70 hover:bg-emerald-500/10"
-                title={social.name}
-              >
-                <i className={social.icon}></i>
-              </a>
+              <SocialMedia key={idx + "-" + social.name} social={social} />
             ))}
           </div>
         </div>

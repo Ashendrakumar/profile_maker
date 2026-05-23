@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, User } from "lucide-react";
 import { usePortfolio } from "@/context/PortfolioContext";
 import { Link } from "react-router-dom";
+import SocialMedia from "./common/SocialMedia";
 
 const HeroSection = () => {
   const { data: portfolioData } = usePortfolio();
@@ -67,16 +68,7 @@ const HeroSection = () => {
 
             <div className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-4">
               {portfolioData.socialLinks.map((social, idx) => (
-                <a
-                  key={idx}
-                  href={social.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-emerald-500/30 hover:border-emerald-400/70 hover:bg-emerald-500/10 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/20"
-                  title={social.name}
-                >
-                  <i className={social.icon}></i>
-                </a>
+                <SocialMedia key={idx + "-" + social.name} social={social} />
               ))}
             </div>
           </div>

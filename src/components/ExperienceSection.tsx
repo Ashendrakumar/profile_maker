@@ -1,5 +1,6 @@
 import React from "react";
 import { usePortfolio } from "@/context/PortfolioContext";
+import AppCard from "./common/AppCard";
 
 const ExperienceSection = () => {
   const { data: portfolioData } = usePortfolio();
@@ -20,59 +21,67 @@ const ExperienceSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          {experienceData.experienceItems.map((item, index) => (
-            <div
-              key={index}
-              className="group relative bg-gradient-to-br from-slate-900/50 to-emerald-900/20 border border-emerald-800/30 rounded-2xl p-6 md:p-8 mb-6 flex flex-col md:flex-row items-start md:items-center gap-6 backdrop-blur-sm transition-all duration-500 hover:border-emerald-500/60 hover:shadow-xl hover:shadow-emerald-500/10 hover:from-slate-900/70 hover:to-emerald-900/40 overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/0 via-teal-400/0 to-cyan-400/0 group-hover:from-emerald-600/5 group-hover:via-teal-400/5 group-hover:to-cyan-400/5 transition-all duration-500 rounded-2xl"></div>
+          <div className="grid gap-6">
+            {experienceData.experienceItems.map((item, index) => (
+              <AppCard key={index + "experience" + item.org_title}>
+                <div className="flex flex-col md:flex-row gap-4">
+                  <div className="flex">
+                    <div className="flex-shrink-0 relative z-10">
+                      <div className="w-16 h-16 bg-gradient-to-br from-emerald-600/20 to-teal-600/20 flex items-center justify-center rounded-xl border border-emerald-500/30 group-hover:border-emerald-400/70 group-hover:bg-gradient-to-br group-hover:from-emerald-600/30 group-hover:to-teal-600/30 group-hover:shadow-lg group-hover:shadow-emerald-500/20 transition-all duration-500">
+                        <img
+                          src={item.orgLogo}
+                          alt={item.org_title}
+                          className="w-10 h-10 object-contain rounded group-hover:scale-110 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <div className="md:hidden block text-right w-full md:w-auto relative z-10">
+                      <div className="bg-gradient-to-br from-emerald-600/15 to-teal-600/15 border border-emerald-500/30 rounded-xl px-4 py-3 inline-block group-hover:border-emerald-400/70 group-hover:from-emerald-600/25 group-hover:to-teal-600/25 group-hover:shadow-lg group-hover:shadow-emerald-500/15 transition-all duration-500">
+                        <p className="text-xl font-bold text-emerald-300 group-hover:text-emerald-200 transition-colors duration-300">
+                          {item.projectsHandled}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-              <div className="flex-shrink-0 relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-600/20 to-teal-600/20 flex items-center justify-center rounded-xl border border-emerald-500/30 group-hover:border-emerald-400/70 group-hover:bg-gradient-to-br group-hover:from-emerald-600/30 group-hover:to-teal-600/30 group-hover:shadow-lg group-hover:shadow-emerald-500/20 transition-all duration-500">
-                  <img
-                    src={item.orgLogo}
-                    alt={item.org_title}
-                    className="w-10 h-10 object-contain rounded group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-              </div>
+                  <div className="flex-grow relative z-10">
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors duration-300">
+                      {item.jobRole}
+                    </h3>
+                    <a
+                      href={item.org_link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-emerald-400 hover:text-cyan-300 text-lg font-medium inline-block mb-2 transition-colors duration-300 hover:underline"
+                    >
+                      {item.org_title}
+                    </a>
+                    <div className="flex flex-col sm:flex-row sm:items-center text-gray-400 text-sm gap-2 sm:gap-6 mt-1">
+                      <span className="flex items-center group-hover:text-gray-300 transition-colors duration-300">
+                        <i className="far fa-calendar mr-2 align-middle"></i>
+                        <em> {item.date}</em>
+                      </span>
+                      <span className="flex items-center group-hover:text-gray-300 transition-colors duration-300">
+                        <i className="fa fa-map-marker-alt alt mr-2 align-middle"></i>
+                        <em>{item.location}</em>{" "}
+                      </span>
+                    </div>
+                  </div>
 
-              <div className="flex-grow relative z-10">
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors duration-300">
-                  {item.jobRole}
-                </h3>
-                <a
-                  href={item.org_link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-emerald-400 hover:text-cyan-300 text-lg font-medium inline-block mb-2 transition-colors duration-300 hover:underline"
-                >
-                  {item.org_title}
-                </a>
-                <div className="flex flex-col sm:flex-row sm:items-center text-gray-400 text-sm gap-2 sm:gap-6 mt-1">
-                  <span className="flex items-center group-hover:text-gray-300 transition-colors duration-300">
-                    <i className="fa fa-calendar mr-2 align-middle"></i>
-                    {item.date}
-                  </span>
-                  <span className="flex items-center group-hover:text-gray-300 transition-colors duration-300">
-                    <i className="fa fa-map-marker-alt mr-2 align-middle"></i>
-                    {item.location}
-                  </span>
+                  <div className="md:block hidden text-right w-full md:w-auto relative z-10">
+                    <div className="bg-gradient-to-br from-emerald-600/15 to-teal-600/15 border border-emerald-500/30 rounded-xl px-4 py-3 inline-block group-hover:border-emerald-400/70 group-hover:from-emerald-600/25 group-hover:to-teal-600/25 group-hover:shadow-lg group-hover:shadow-emerald-500/15 transition-all duration-500">
+                      <p className="text-xs text-gray-400 mb-1 group-hover:text-gray-300 transition-colors">
+                        Projects Handled
+                      </p>
+                      <p className="text-xl font-bold text-emerald-300 group-hover:text-emerald-200 transition-colors duration-300">
+                        {item.projectsHandled}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-
-              <div className="md:text-right w-full md:w-auto relative z-10">
-                <div className="bg-gradient-to-br from-emerald-600/15 to-teal-600/15 border border-emerald-500/30 rounded-xl px-4 py-3 inline-block group-hover:border-emerald-400/70 group-hover:from-emerald-600/25 group-hover:to-teal-600/25 group-hover:shadow-lg group-hover:shadow-emerald-500/15 transition-all duration-500">
-                  <p className="text-xs text-gray-400 mb-1 group-hover:text-gray-300 transition-colors">
-                    Projects Handled
-                  </p>
-                  <p className="text-xl font-bold text-emerald-300 group-hover:text-emerald-200 transition-colors duration-300">
-                    {item.projectsHandled}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
+              </AppCard>
+            ))}
+          </div>
         </div>
       </div>
     </div>

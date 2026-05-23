@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "@/pages/Index";
 import { PortfolioProvider } from "@/context/PortfolioContext";
 import ErrorPage from "@/pages/ErrorPage";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const queryClient = new QueryClient();
 

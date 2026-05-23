@@ -22,16 +22,18 @@ const SkillsSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {skillsData.skillItems.map((skill, index) => (
             <div
-              key={index}
-              className="group relative bg-gradient-to-br from-slate-900/50 to-emerald-900/20 p-6 rounded-2xl border border-emerald-800/30 backdrop-blur-sm hover:border-emerald-500/60 transition-all duration-500 flex flex-col items-center justify-center text-center overflow-hidden hover:shadow-xl hover:shadow-emerald-500/10 hover:from-slate-900/70 hover:to-emerald-900/40"
+              key={index + "-" + skill.name}
+              className="group  hover:-translate-y-2 relative bg-gradient-to-br from-slate-900/50 to-emerald-900/20 p-6 rounded-2xl border border-emerald-800/30 backdrop-blur-sm hover:border-emerald-500/60 transition-all duration-500 flex flex-col items-center justify-center text-center overflow-hidden hover:shadow-xl hover:shadow-emerald-500/10 hover:from-slate-900/70 hover:to-emerald-900/40"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/0 via-teal-400/0 to-cyan-400/0 group-hover:from-emerald-600/5 group-hover:via-teal-400/5 group-hover:to-cyan-400/5 transition-all duration-500 rounded-2xl"></div>
 
               <div className="relative z-10 w-16 h-16 flex items-center justify-center rounded-full mb-4 bg-gradient-to-br from-emerald-600/20 to-teal-600/20 border border-emerald-500/30 group-hover:border-emerald-400/70 group-hover:from-emerald-600/30 group-hover:to-teal-600/30 group-hover:shadow-lg group-hover:shadow-emerald-500/20 group-hover:scale-110 transition-all duration-500">
                 <i
-                  className={`${skill.icon} text-2xl text-emerald-400 group-hover:text-cyan-300 transition-all duration-300 group-hover:scale-125`}
-                ></i>
+                  className={`text-2xl text-emerald-400 group-hover:text-cyan-300 transition-all duration-300 group-hover:scale-125`}
+                >
+                  {skill.level + "%"}
+                </i>
               </div>
               <h3 className="text-lg font-semibold mb-2 text-white group-hover:text-emerald-300 transition-colors duration-300 relative z-10">
                 {skill.name}

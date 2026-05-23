@@ -1,5 +1,6 @@
 import React from "react";
 import { usePortfolio } from "@/context/PortfolioContext";
+import SocialMedia from "./common/SocialMedia";
 
 const ContactSection = () => {
   const { data: portfolioData } = usePortfolio();
@@ -7,7 +8,10 @@ const ContactSection = () => {
   const { contactData } = portfolioData;
 
   return (
-    <div className="bg-gradient-to-b from-slate-950 via-emerald-950/20 to-slate-950 py-16 md:py-20" id="contact">
+    <div
+      className="bg-gradient-to-b from-slate-950 via-emerald-950/20 to-slate-950 py-16 md:py-20"
+      id="contact"
+    >
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -51,16 +55,7 @@ const ContactSection = () => {
 
               <div className="mt-8 flex gap-4">
                 {portfolioData.socialLinks.map((social, idx) => (
-                  <a
-                    key={idx}
-                    href={social.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="w-10 h-10 flex items-center justify-center rounded-full border border-emerald-500/30 hover:border-emerald-400/70 hover:bg-emerald-500/10 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/20"
-                    title={social.name}
-                  >
-                    <i className={social.icon}></i>
-                  </a>
+                  <SocialMedia key={idx + "-" + social.name} social={social} />
                 ))}
               </div>
             </div>
