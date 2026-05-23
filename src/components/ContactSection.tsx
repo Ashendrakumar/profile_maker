@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { usePortfolio } from "@/context/PortfolioContext";
 import SocialMedia from "./common/SocialMedia";
+import config from "@/config";
 
 const ContactSection = () => {
   const { data: portfolioData } = usePortfolio();
+  const [result, setResult] = useState("");
   if (!portfolioData) return null;
   const { contactData } = portfolioData;
+
+  const onSubmit = async (event: any) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target as HTMLFormElement);
+    formData.append("access_key", config.EMAIL_ACCESS_KEY);
+
+    const response = await fetch(config.EMAIL_SERVICE_API, {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target?.reset();
+    } else {
+      console.error(result);
+      setResult("Error");
+    }
+  };
 
   return (
     <div
@@ -65,10 +88,12 @@ const ContactSection = () => {
                 <h3 className="text-xl font-bold text-white mb-4">
                   {contactData.contactFormSection.title}
                 </h3>
+                {/* {result && <p className="text-green-400 mb-4">{result}</p>} */}
                 <form className="space-y-4">
                   <div>
                     <input
                       type="text"
+                      required
                       placeholder="Your Name"
                       className="w-full bg-slate-900/50 border border-emerald-800/30 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all duration-300 backdrop-blur-sm"
                     />
@@ -76,6 +101,7 @@ const ContactSection = () => {
                   <div>
                     <input
                       type="email"
+                      required
                       placeholder="Your Email"
                       className="w-full bg-slate-900/50 border border-emerald-800/30 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all duration-300 backdrop-blur-sm"
                     />
@@ -84,11 +110,13 @@ const ContactSection = () => {
                     <textarea
                       placeholder="Your Message"
                       rows={4}
+                      required
                       className="w-full bg-slate-900/50 border border-emerald-800/30 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all duration-300 backdrop-blur-sm resize-none"
                     ></textarea>
                   </div>
                   <button
-                    type="button"
+                    onClick={onSubmit}
+                    type="submit"
                     className="w-full py-3 rounded-lg font-semibold bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-500 hover:to-teal-500 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 border border-emerald-400/30 hover:border-emerald-400 hover:-translate-y-0.5"
                   >
                     Send Message
