@@ -89,7 +89,7 @@ const ContactSection = () => {
                   {contactData.contactFormSection.title}
                 </h3>
                 {/* {result && <p className="text-green-400 mb-4">{result}</p>} */}
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={onSubmit}>
                   <div>
                     <input
                       type="text"
@@ -115,7 +115,6 @@ const ContactSection = () => {
                     ></textarea>
                   </div>
                   <button
-                    onClick={onSubmit}
                     type="submit"
                     className="w-full py-3 rounded-lg font-semibold bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-500 hover:to-teal-500 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 border border-emerald-400/30 hover:border-emerald-400 hover:-translate-y-0.5"
                   >
