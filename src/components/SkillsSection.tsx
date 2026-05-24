@@ -8,7 +8,7 @@ const SkillsSection = () => {
 
   return (
     <div
-      className="bg-gradient-to-b from-slate-950 via-emerald-950/20 to-slate-950 "
+      className="bg-gradient-to-b from-slate-950 via-emerald-950/20 to-slate-950 pt-16 md:pt-20"
       id="skills"
     >
       <div className="section-container">

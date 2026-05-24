@@ -32,7 +32,7 @@ const ContactSection = () => {
 
   return (
     <div
-      className="bg-gradient-to-b from-slate-950 via-emerald-950/20 to-slate-950 py-16 md:py-20"
+      className="bg-gradient-to-b from-slate-950 via-emerald-950/20 to-slate-950 pt-16 md:pt-20"
       id="contact"
     >
       <div className="section-container">

@@ -11,7 +11,7 @@ const ProjectsSection = () => {
 
   return (
     <div
-      className="bg-gradient-to-b from-slate-950 via-emerald-950/20 to-slate-950 "
+      className="bg-gradient-to-b from-slate-950 via-emerald-950/20 to-slate-950 pt-16 md:pt-20"
       id="projects"
     >
       <div className="section-container border-t border-emerald-900/30 pt-16">
