@@ -1,4 +1,5 @@
 const config = {
+  BASE_URL: import.meta.env.VITE_BASE_URL,
   API_URL: import.meta.env.VITE_API_URL,
   CRYPTO_SECRET: import.meta.env.VITE_CRYPTO_SECRET,
   CRYPTO_IV: import.meta.env.VITE_CRYPTO_IV,

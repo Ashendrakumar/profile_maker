@@ -88,7 +88,7 @@ const HeroSection = () => {
                   />
                 ) : (
                   <div className="w-full h-[400px] flex items-center justify-center text-gray-500">
-                    <User size={120} />
+                    <User size={200} />
                   </div>
                 )}
               </div>

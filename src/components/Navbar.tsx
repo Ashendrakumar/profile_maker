@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { usePortfolio } from "@/context/PortfolioContext";
+import config from "@/config";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +19,27 @@ const Navbar = () => {
 
   const isActive = (path: string) => {
     return location.pathname === path;
+  };
+
+  const downloadResume = async () => {
+    try {
+      const resumeUrl = config.BASE_URL + portfolioData.resumeData.resumeLink;
+      const fileName =
+        portfolioData.contactData.fName +
+        portfolioData.contactData.lName +
+        "_resume.pdf";
+
+      const url = window.URL.createObjectURL(resumeUrl as any);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Download failed:", error);
+    }
   };
 
   return (
@@ -55,8 +77,8 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <a
-              href={portfolioData.resumeData.downloadLink}
-              download={portfolioData.resumeData.resumeName}
+              href={config.BASE_URL + portfolioData.resumeData.resumeLink}
+              download={config.BASE_URL + portfolioData.resumeData.resumeLink}
               target="_blank"
               rel="noreferrer"
               className="px-6 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-500 hover:to-teal-500 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 border border-emerald-400/30 hover:border-emerald-400"
