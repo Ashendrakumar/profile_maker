@@ -27,12 +27,10 @@ const ExperienceSection = () => {
                 <div className="flex flex-col md:flex-row gap-4">
                   <div className="flex">
                     <div className="flex-shrink-0 relative z-10">
-                      <div className="w-16 h-16 bg-gradient-to-br from-emerald-600/20 to-teal-600/20 flex items-center justify-center rounded-xl border border-emerald-500/30 group-hover:border-emerald-400/70 group-hover:bg-gradient-to-br group-hover:from-emerald-600/30 group-hover:to-teal-600/30 group-hover:shadow-lg group-hover:shadow-emerald-500/20 transition-all duration-500">
-                        <img
-                          src={item.orgLogo}
-                          alt={item.org_title}
-                          className="w-10 h-10 object-contain rounded group-hover:scale-110 transition-transform duration-300"
-                        />
+                      <div className="text-nowrap text-center w-16 h-16 bg-gradient-to-br from-emerald-600/20 to-teal-600/20 flex items-center justify-center rounded-xl border border-emerald-500/30 group-hover:border-emerald-400/70 group-hover:bg-gradient-to-br group-hover:from-emerald-600/30 group-hover:to-teal-600/30 group-hover:shadow-lg group-hover:shadow-emerald-500/20 transition-all duration-500">
+                        <span className="w-10 text-2xl font-bold h-10 text-emerald-300 group-hover:text-emerald-200 object-contain rounded group-hover:scale-110 transition-transform duration-300">
+                          {item.org_title.slice(0, 2).toUpperCase()}
+                        </span>
                       </div>
                     </div>
                     <div className="md:hidden block text-right w-full md:w-auto relative z-10">
