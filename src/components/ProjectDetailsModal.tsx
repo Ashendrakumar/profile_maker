@@ -156,19 +156,12 @@ export const ProjectDrawer = ({
   if (!project) return null;
 
   return (
-    <Drawer
-      open={open}
-      onOpenChange={(isOpen) => !isOpen && onClose()}
-      direction="right"
-    >
+    <Drawer open={open} onOpenChange={(isOpen) => !isOpen && onClose()}>
       <DrawerContent
         className="
           bg-gradient-to-br from-slate-900/95 to-emerald-900/30
-          border-l border-emerald-800/30
-          backdrop-blur-sm
-          fixed right-0 top-0 h-full w-[480px]    
-          focus:outline-none
-          rounded-none"
+          border-emerald-800/30
+          backdrop-blur-sm"
       >
         {/* 1. HEADER — fixed at top, never scrolls */}
         <DrawerHeader className="shrink-0 border-b border-emerald-800/30 pb-4">
@@ -262,7 +255,7 @@ export const ProjectDrawer = ({
         </div>
 
         {/* 3. FOOTER — fixed at bottom, never scrolls */}
-        {project.projectLink.length && (
+        {project.projectLink && project.projectLink !== "#" && (
           <DrawerFooter className="shrink-0 border-t border-emerald-800/30">
             <a
               href={project.projectLink}
