@@ -21,24 +21,22 @@ const Navbar = () => {
     return location.pathname === path;
   };
 
-  const downloadResume = async () => {
+  const downloadResume = async (downloadLink: string, downloadName: string) => {
     try {
-      const resumeUrl = config.BASE_URL + portfolioData.resumeData.resumeLink;
-      const fileName =
-        portfolioData.contactData.fName +
-        portfolioData.contactData.lName +
-        "_resume.pdf";
+      const response = await fetch(downloadLink);
+      const blob = await response.blob();
 
-      const url = window.URL.createObjectURL(resumeUrl as any);
+      const url = globalThis.URL.createObjectURL(blob);
+
       const link = document.createElement("a");
       link.href = url;
-      link.download = fileName;
+      link.download = `${downloadName}.pdf`;
       document.body.appendChild(link);
       link.click();
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error("Download failed:", error);
+      link.remove();
+      globalThis.URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error(err);
     }
   };
 
@@ -76,9 +74,9 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a
-              href={config.BASE_URL + portfolioData.resumeData.resumeLink}
-              download={config.BASE_URL + portfolioData.resumeData.resumeLink}
+            {/* <a
+              href={portfolioData.resumeData.resumeLink}
+              download={portfolioData.resumeData.resumeLink}
               target="_blank"
               rel="noreferrer"
               className="px-6 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-500 hover:to-teal-500 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 border border-emerald-400/30 hover:border-emerald-400"
@@ -87,7 +85,19 @@ const Navbar = () => {
                 className={`${portfolioData.resumeData.downloadIcon} mr-2`}
               ></i>
               {portfolioData.resumeData.downloadText}
-            </a>
+            </a> */}
+            <button
+              onClick={() =>
+                downloadResume(
+                  portfolioData.resumeData.downloadLink,
+                  portfolioData.resumeData.resumeName ?? "resume",
+                )
+              }
+              className="px-6 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-lg"
+            >
+              <i className={`${portfolioData.resumeData.downloadIcon} mr-2`} />
+              {portfolioData.resumeData.downloadText}
+            </button>
           </div>
 
           {/* Mobile menu button */}
