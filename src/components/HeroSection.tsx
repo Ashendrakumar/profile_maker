@@ -82,7 +82,7 @@ const HeroSection = () => {
               <div className="relative bg-gradient-to-br from-slate-900/50 to-emerald-900/20 rounded-2xl border border-emerald-500/30 p-2 backdrop-blur-sm transform transition-all duration-500 hover:scale-[1.02] hover:border-emerald-400/70 hover:shadow-xl hover:shadow-emerald-500/20 overflow-hidden flex items-center justify-center">
                 {projectNavbarData.profileImage ? (
                   <img
-                    src={config.BASE_URL + projectNavbarData.profileImage}
+                    src={projectNavbarData.profileImage}
                     alt={projectNavbarData.projectName}
                     className="rounded-xl w-full h-[400px] object-cover"
                   />
