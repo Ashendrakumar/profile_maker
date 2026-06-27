@@ -74,7 +74,7 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            {/* <a
+            <a
               href={portfolioData.resumeData.resumeLink}
               download={portfolioData.resumeData.resumeLink}
               target="_blank"
@@ -85,19 +85,7 @@ const Navbar = () => {
                 className={`${portfolioData.resumeData.downloadIcon} mr-2`}
               ></i>
               {portfolioData.resumeData.downloadText}
-            </a> */}
-            <button
-              onClick={() =>
-                downloadResume(
-                  portfolioData.resumeData.downloadLink,
-                  portfolioData.resumeData.resumeName ?? "resume",
-                )
-              }
-              className="px-6 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-lg"
-            >
-              <i className={`${portfolioData.resumeData.downloadIcon} mr-2`} />
-              {portfolioData.resumeData.downloadText}
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
