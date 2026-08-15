@@ -9,7 +9,6 @@ const getData = async (
     const codedId = codedUserDetail.split("-")[1];
     const response = await fetch(`${API_URL}/portfolio/${codedId}`, {
       method: "GET",
-      cache: "force-cache",
       headers: {
         "Content-Type": "application/json",
       },
@@ -27,4 +26,24 @@ const getData = async (
   }
 };
 
-export { getData };
+const sendContactDetails = async (reqBody: { name: string; email: string; message: string }) => {
+  try {
+    const response = await fetch(`${API_URL}/contact-form/send`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(reqBody),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to send contact details");
+    }
+
+    return await response.json();
+  } catch (error) {
+    throw error;
+  }
+};
+
+export { getData , sendContactDetails};
