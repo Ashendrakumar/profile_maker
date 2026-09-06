@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { usePortfolio } from "@/context/PortfolioContext";
+import { usePortfolio } from "@src/context/PortfolioContext";
 import SocialMedia from "./common/SocialMedia";
-import config from "@/config";
+import config from "@src/config";
 
 const ContactSection = () => {
   const { data: portfolioData } = usePortfolio();

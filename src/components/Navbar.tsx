@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { Button } from "@src/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { usePortfolio } from "@/context/PortfolioContext";
-import config from "@/config";
+import { usePortfolio } from "@src/context/PortfolioContext";
+import config from "@src/config";
 import UserLogo from "./common/UserLogo";
 
 const Navbar = () => {

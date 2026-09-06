@@ -1,5 +1,5 @@
-import config from "@/config";
-import portfolioData from "@/ashendra.json";
+import config from "@src/config";
+import portfolioData from "@src/ashendra.json";
 const { API_URL } = config;
 
 const getData = async (

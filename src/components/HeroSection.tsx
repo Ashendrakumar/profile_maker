@@ -1,13 +1,13 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@src/components/ui/button";
 import { ArrowRight, User } from "lucide-react";
-import { usePortfolio } from "@/context/PortfolioContext";
+import { usePortfolio } from "@src/context/PortfolioContext";
 import SocialMedia from "./common/SocialMedia";
 
 const HeroSection = () => {
   const { data: portfolioData } = usePortfolio();
   if (!portfolioData) return null;
   const { contactData, aboutData, projectNavbarData } = portfolioData;
-  const imageUrl = '../../public/img/profile.webp';
+  const imageUrl = 'public/img/profile.webp';
 
   const roleWords = contactData.role.split(" ");
 

@@ -1,13 +1,13 @@
 import React from "react";
-import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import SkillsSection from "@/components/SkillsSection";
-import ProjectsSection from "@/components/ProjectsSection";
-import EducationSection from "@/components/EducationSection";
-import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
-import ExperienceSection from "@/components/ExperienceSection";
-import { ScrollReveal } from "@/components/common/ScrollReveal";
+import Navbar from "@src/components/Navbar";
+import HeroSection from "@src/components/HeroSection";
+import SkillsSection from "@src/components/SkillsSection";
+import ProjectsSection from "@src/components/ProjectsSection";
+import EducationSection from "@src/components/EducationSection";
+import ContactSection from "@src/components/ContactSection";
+import Footer from "@src/components/Footer";
+import ExperienceSection from "@src/components/ExperienceSection";
+import { ScrollReveal } from "@src/components/common/ScrollReveal";
 
 // Because we renamed components INSIDE the files and imported them,
 // wait, we export default their new names. The file names stay the same but we should make sure we use the new default exports or change imports.

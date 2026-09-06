@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import mockData from "../ashendra.json";
-import PortfolioLoader from "@/components/ui/PortfolioLoader";
-import ErrorPage from "@/pages/ErrorPage";
-import { getData } from "@/hooks/usePortfolio";
+import PortfolioLoader from "@src/components/ui/PortfolioLoader";
+import ErrorPage from "@src/pages/ErrorPage";
+import { getData } from "@src/hooks/usePortfolio";
 
 type PortfolioContextType = {
   data: typeof mockData | null;

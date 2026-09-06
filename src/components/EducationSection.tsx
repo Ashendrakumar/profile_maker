@@ -1,5 +1,5 @@
 import React from "react";
-import { usePortfolio } from "@/context/PortfolioContext";
+import { usePortfolio } from "@src/context/PortfolioContext";
 import AppCard from "./common/AppCard";
 
 const EducationSection = () => {

@@ -1,4 +1,4 @@
-import { usePortfolio } from "@/context/PortfolioContext";
+import { usePortfolio } from "@src/context/PortfolioContext";
 
 const SkillsSection = () => {
   const { data: portfolioData } = usePortfolio();

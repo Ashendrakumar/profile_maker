@@ -1,11 +1,11 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "@src/components/ui/toaster";
+import { Toaster as Sonner } from "@src/components/ui/sonner";
+import { TooltipProvider } from "@src/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "@/pages/Index";
-import { PortfolioProvider } from "@/context/PortfolioContext";
-import ErrorPage from "@/pages/ErrorPage";
+import Index from "@src/pages/Index";
+import { PortfolioProvider } from "@src/context/PortfolioContext";
+import ErrorPage from "@src/pages/ErrorPage";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const queryClient = new QueryClient();

@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@src/components/ui/button";
 import { Check, ExternalLink } from "lucide-react";
-import { usePortfolio } from "@/context/PortfolioContext";
+import { usePortfolio } from "@src/context/PortfolioContext";
 import AppCard from "./common/AppCard";
 import { ProjectDrawer } from "./ProjectDetailsModal";
 import { Tabs } from "@radix-ui/react-tabs";

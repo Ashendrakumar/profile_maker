@@ -1,5 +1,5 @@
 import { AES, enc } from "crypto-js";
-import config from "@/config";
+import config from "@src/config";
 
 let { CRYPTO_SECRET } = config;
 if (!CRYPTO_SECRET) {

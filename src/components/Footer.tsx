@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { usePortfolio } from "@/context/PortfolioContext";
+import { usePortfolio } from "@src/context/PortfolioContext";
 import SocialMedia from "./common/SocialMedia";
 import UserLogo from "./common/UserLogo";
 
