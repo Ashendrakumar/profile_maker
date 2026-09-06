@@ -15,33 +15,35 @@ import { ScrollReveal } from "@src/components/common/ScrollReveal";
 
 const Index = () => {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-gradient-to-b from-slate-950 to-emerald-950/10 text-white">
+    <>
       <Navbar />
-      <main>
-        <HeroSection />
+      <div className="min-h-screen overflow-x-hidden  bg-gradient-to-b from-slate-950 to-emerald-950/10 text-white">
+        <main>
+          <HeroSection />
 
-        <ScrollReveal variant="fade-left" delay={100}>
-          <ExperienceSection />
-        </ScrollReveal>
+          <ScrollReveal variant="fade-left" delay={100}>
+            <ExperienceSection />
+          </ScrollReveal>
 
-        <ScrollReveal variant="fade-right" delay={100}>
-          <ProjectsSection />
-        </ScrollReveal>
+          <ScrollReveal variant="fade-right" delay={100}>
+            <ProjectsSection />
+          </ScrollReveal>
 
-        <ScrollReveal variant="fade-up">
-          <EducationSection />
-        </ScrollReveal>
+          <ScrollReveal variant="fade-up">
+            <EducationSection />
+          </ScrollReveal>
 
-        <ScrollReveal variant="fade-down">
-          <SkillsSection />
-        </ScrollReveal>
+          <ScrollReveal variant="fade-down">
+            <SkillsSection />
+          </ScrollReveal>
 
-        <ScrollReveal variant="fade-left" delay={300}>
-          <ContactSection />
-        </ScrollReveal>
-      </main>
-      <Footer />
-    </div>
+          <ScrollReveal variant="fade-left" delay={300}>
+            <ContactSection />
+          </ScrollReveal>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 

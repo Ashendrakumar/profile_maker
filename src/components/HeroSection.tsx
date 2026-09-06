@@ -20,7 +20,7 @@ const HeroSection = () => {
   return (
     <div
       id="about"
-      className="relative bg-gradient-to-b from-slate-950 via-emerald-950/30 to-slate-950 overflow-hidden min-h-[90vh] flex items-center"
+      className="relative md:pt-6 bg-gradient-to-b from-slate-950 via-emerald-950/30 to-slate-950 overflow-hidden min-h-[90vh] flex items-center"
     >
       {/* Emerald glow effects */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-emerald-500 opacity-10 rounded-full blur-[100px]"></div>
@@ -30,7 +30,7 @@ const HeroSection = () => {
       <div className="section-container relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           <div className="animate-fade-in order-2 lg:order-1 text-center lg:text-left">
-            <span className="hero-badge inline-block bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-emerald-500/30 hover:border-emerald-400/70 hover:bg-emerald-500/20 transition-all duration-300">
+            <span className=" hero-badge inline-block bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-emerald-500/30 hover:border-emerald-400/70 hover:bg-emerald-500/20 transition-all duration-300">
               Hello I'm <span className="uppercase">{contactData.fName}</span>{" "}
               {contactData.lName}
             </span>
