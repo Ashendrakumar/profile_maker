@@ -7,7 +7,6 @@ const HeroSection = () => {
   const { data: portfolioData } = usePortfolio();
   if (!portfolioData) return null;
   const { contactData, aboutData, projectNavbarData } = portfolioData;
-  const imageUrl = 'public/img/profile.webp';
 
   const roleWords = contactData.role.split(" ");
 
@@ -82,7 +81,7 @@ const HeroSection = () => {
             <div className="relative max-w-md w-full">
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-600 blur-xl opacity-20 rounded-xl"></div>
               <div className="relative bg-gradient-to-br from-slate-900/50 to-emerald-900/20 rounded-2xl border border-emerald-500/30 p-2 backdrop-blur-sm transform transition-all duration-500 hover:scale-[1.02] hover:border-emerald-400/70 hover:shadow-xl hover:shadow-emerald-500/20 overflow-hidden flex items-center justify-center">
-                {/* {projectNavbarData.profileImage ? (
+                {projectNavbarData.profileImage ? (
                   <img
                     src={projectNavbarData.profileImage}
                     alt={projectNavbarData.projectName}
@@ -92,12 +91,7 @@ const HeroSection = () => {
                   <div className="w-full h-[400px] flex items-center justify-center text-gray-500">
                     <User size={200} />
                   </div>
-                )} */}
-                <img
-                    src={imageUrl}
-                    alt={projectNavbarData.projectName}
-                    className="rounded-xl w-full h-[400px] object-cover"
-                  />
+                )}
               </div>
             </div>
           </div>
