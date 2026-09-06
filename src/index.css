@@ -129,6 +129,43 @@
     @apply bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent;
   }
 
+  .hero-badge {
+    box-shadow: inset 0 0 0 1px rgba(52, 211, 153, 0.15);
+  }
+
+  .hero-title {
+    font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  }
+
+  .hero-line {
+    display: block;
+  }
+
+  .hero-role-word {
+    --word-width: 18ch;
+    margin-block: -15px;
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: transparent;
+    transform: rotate(-7deg);
+    background: linear-gradient(90deg, #34d399 0%, #2dd4bf 48%, #5eead4 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: heroTyping 1.8s steps(18, end) forwards, heroCursor 0.75s step-end infinite;
+    animation-delay: var(--delay, 0s);
+    letter-spacing: -0.06em;
+    text-shadow: 0 0 20px rgba(45, 212, 191, 0.18);
+    line-height: unset;
+  }
+
+  .hero-description {
+    font-family: "Segoe UI", sans-serif;
+    color: rgba(226, 232, 240, 0.9);
+    text-wrap: balance;
+  }
+
   /* Add animation utilities */
   .animate-fade-in {
     @apply opacity-0 translate-y-4 animate-[fadeIn_0.5s_ease-out_forwards];
@@ -152,6 +189,31 @@
   /* Add hover effects for cards */
   .hover-zoom {
     @apply transition-transform duration-300 hover:scale-105;
+  }
+}
+
+@keyframes heroTyping {
+  from {
+    width: 0;
+    color: transparent;
+  }
+  1% {
+    color: transparent;
+  }
+  to {
+    width: var(--word-width);
+    color: transparent;
+  }
+}
+
+@keyframes heroCursor {
+  0%,
+  49% {
+    border-right-color: rgba(52, 211, 153, 0.9);
+  }
+  50%,
+  100% {
+    border-right-color: transparent;
   }
 }
 
