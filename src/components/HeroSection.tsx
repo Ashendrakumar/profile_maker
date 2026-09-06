@@ -12,8 +12,8 @@ const HeroSection = () => {
   const roleWords = contactData.role.split(" ");
 
   const descriptionSnippet = aboutData.description
-    ? aboutData.description.length > 160
-      ? `${aboutData.description.substring(0, 160)}...`
+    ? aboutData.description.length > 200
+      ? `${aboutData.description.substring(0, 200)}...`
       : aboutData.description
     : "";
 
@@ -38,7 +38,7 @@ const HeroSection = () => {
             <h1 className="font-black mb-6 tracking-[-0.06em] leading-[0.82]">
               <span className="hero-line block text-white text-2xl md:text-3xl lg:text-[5rem]">A Passionate</span>
               {roleWords.map((word, index) => (
-                <span key={word + index} className="hero-title block text-4xl md:text-6xl lg:text-[7rem]">
+                <span key={word + index} className="hero-title block text-5xl md:text-6xl  lg:text-[5rem] xl:text-[7rem] ">
                   <span
                     className="hero-role-word"
                     style={{
@@ -52,7 +52,7 @@ const HeroSection = () => {
               ))}
             </h1>
 
-            <p className="hero-description text-lg md:text-xl mb-8 text-gray-300 max-w-2xl mx-auto lg:mx-0 text-left lg:text-left italic leading-relaxed">
+            <p className="hero-description text-lg md:text-xl mb-8 text-center text-gray-300 max-w-2xl mx-auto lg:mx-0 lg:text-left  italic leading-relaxed">
               {descriptionSnippet && <>&ldquo;{descriptionSnippet}&rdquo;</>}
             </p>
 

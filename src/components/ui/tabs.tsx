@@ -1,6 +1,5 @@
 import * as React from "react"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
-
 import { cn } from "@/lib/utils"
 
 const Tabs = TabsPrimitive.Root
@@ -12,7 +11,7 @@ const TabsList = React.forwardRef<
   <TabsPrimitive.List
     ref={ref}
     className={cn(
-      "inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground",
+      "inline-flex h-12 items-center justify-center rounded-lg bg-black/40  p-1 text-gray-400 backdrop-blur-sm transition-all duration-500",
       className
     )}
     {...props}
@@ -27,7 +26,9 @@ const TabsTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      "inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm",
+      "inline-flex items-center justify-center whitespace-nowrap rounded-md px-5 py-2 text-sm font-medium ring-offset-background transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+      "text-gray-400 hover:text-emerald-300",
+      "data-[state=active]:bg-gradient-to-r data-[state=active]:from-emerald-500 data-[state=active]:to-teal-500 data-[state=active]:text-white ",
       className
     )}
     {...props}
@@ -42,7 +43,7 @@ const TabsContent = React.forwardRef<
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
-      "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+      "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2",
       className
     )}
     {...props}

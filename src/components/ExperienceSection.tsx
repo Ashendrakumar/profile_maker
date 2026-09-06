@@ -20,7 +20,7 @@ const ExperienceSection = () => {
           <p className="text-gray-400">{experienceData.sub_title}</p>
         </div>
         <div className="max-w-4xl mx-auto">
-          <div className="grid gap-6">
+          <div className="grid gap-6 animate-fade-in animate-duration-[400ms]">
             {experienceData.experienceItems.map((item, index) => (
               <AppCard key={index + "experience" + item.org_title}>
                 <div className="flex flex-col md:flex-row gap-4">

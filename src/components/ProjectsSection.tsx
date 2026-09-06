@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, ExternalLink } from "lucide-react";
 import { usePortfolio } from "@/context/PortfolioContext";
 import AppCard from "./common/AppCard";
 import { ProjectDrawer } from "./ProjectDetailsModal";
+import { Tabs } from "@radix-ui/react-tabs";
+import { TabsList, TabsTrigger } from "./ui/tabs";
+
+type TabValue = "personal" | "professional";
 
 const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState<TabValue>("professional");
   const { data: portfolioData } = usePortfolio();
   if (!portfolioData) return null;
   const { projects, title, sub_title } = portfolioData.resumeData.projectData;
@@ -22,22 +27,53 @@ const ProjectsSection = () => {
     setTimeout(() => setSelectedProject(null), 300);
   };
 
+  const isPersonalProjects = useMemo(
+    () =>
+      projects.filter(
+        (project) => project.projectOrg?.trim().toLowerCase() === "personal",
+      ),
+    [projects],
+  );
+
+  const filteredProjects = useMemo(
+    () =>
+      projects.filter(
+        (project) =>
+          project.projectOrg?.trim().toLowerCase() !== "personal",
+      ),
+    [projects],
+  );
+
   return (
     <>
       <div
-        className="bg-gradient-to-b from-slate-950 via-emerald-950/20 to-slate-950 pt-16 md:pt-20"
+        className="bg-gradient-to-b from-slate-950 via-emerald-950/20 to-slate-950 pt-10 md:pt-16"
         id="projects"
       >
         <div className="section-container border-t border-emerald-900/30 pt-16">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+        {isPersonalProjects && isPersonalProjects.length > 0 && (
+          <Tabs
+            value={activeTab}
+            onValueChange={(v) => setActiveTab(v as TabValue)}
+            className="w-full max-w-2xl justify-center mx-auto mb-8"
+          >
+            <TabsList className="grid w-full grid-cols-2">
+              <TabsTrigger value="personal">Personal</TabsTrigger>
+              <TabsTrigger value="professional">Professional</TabsTrigger>
+            </TabsList>
+          </Tabs>
+        )}
+          <div className="text-center max-w-3xl mx-auto mb-12 mt-2">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="gradient-text"> {title}</span>
+              <span className="gradient-text">
+                {activeTab === "personal" ? "Personal Projects" : title}{" "}
+              </span>
             </h2>
             <p className="text-gray-400 mb-8">{sub_title}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
+            {filteredProjects.map((project, index) => (
               <AppCard key={index + "project" + project.projectHeading}>
                 <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-emerald-300 transition-colors duration-300 relative z-10">
                   {project.projectHeading}

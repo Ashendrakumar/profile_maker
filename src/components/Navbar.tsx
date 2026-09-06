@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { usePortfolio } from "@/context/PortfolioContext";
 import config from "@/config";
+import UserLogo from "./common/UserLogo";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,14 +46,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="flex items-center">
-              <span className="text-2xl uppercase font-bold bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent hover:from-emerald-300 hover:to-cyan-400 transition-all duration-300">
-                {projectNavbarData.projectName}{" "}
-                {/* {projectNavbarData.projectOptionName} */}
-              </span>
-            </Link>
-          </div>
+          <UserLogo userName={projectNavbarData.projectName} />
 
           {/* Desktop menu */}
           <div className="hidden md:block">
