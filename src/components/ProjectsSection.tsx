@@ -29,20 +29,23 @@ const ProjectsSection = () => {
 
   const isPersonalProjects = useMemo(
     () =>
-      projects.filter(
+      projects.some(
         (project) => project.projectOrg?.trim().toLowerCase() === "personal",
       ),
     [projects],
   );
 
-  const filteredProjects = useMemo(
-    () => 
-        projects.filter(
-          (project) =>
-            project.projectOrg?.trim().toLowerCase() === activeTab ,
-        ),
-    [activeTab, projects],
-  );
+  const filteredProjects = useMemo(() => {
+    if (activeTab === "personal") {
+      return projects.filter(
+        (project) => project.projectOrg?.trim().toLowerCase() === "personal",
+      );
+    } else {
+      return projects.filter(
+        (project) => project.projectOrg?.trim().toLowerCase() !== "personal",
+      );
+    }
+  }, [activeTab, projects]);
 
   return (
     <>
@@ -51,18 +54,18 @@ const ProjectsSection = () => {
         id="projects"
       >
         <div className="section-container border-t border-emerald-900/30 pt-16">
-        {isPersonalProjects && isPersonalProjects.length > 0 && (
-          <Tabs
-            value={activeTab}
-            onValueChange={(v) => setActiveTab(v as TabValue)}
-            className="w-full max-w-2xl justify-center mx-auto mb-8"
-          >
-            <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="personal">Personal</TabsTrigger>
-              <TabsTrigger value="professional">Professional</TabsTrigger>
-            </TabsList>
-          </Tabs>
-        )}
+          {isPersonalProjects && (
+            <Tabs
+              value={activeTab}
+              onValueChange={(v) => setActiveTab(v as TabValue)}
+              className="w-full max-w-2xl justify-center mx-auto mb-8"
+            >
+              <TabsList className="grid w-full grid-cols-2">
+                <TabsTrigger value="personal">Personal</TabsTrigger>
+                <TabsTrigger value="professional">Professional</TabsTrigger>
+              </TabsList>
+            </Tabs>
+          )}
           <div className="text-center max-w-3xl mx-auto mb-12 mt-2">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               <span className="gradient-text">
