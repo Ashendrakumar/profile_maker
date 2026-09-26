@@ -36,12 +36,12 @@ const ProjectsSection = () => {
   );
 
   const filteredProjects = useMemo(
-    () =>
-      projects.filter(
-        (project) =>
-          project.projectOrg?.trim().toLowerCase() !== "personal",
-      ),
-    [projects],
+    () => 
+        projects.filter(
+          (project) =>
+            project.projectOrg?.trim().toLowerCase() === activeTab ,
+        ),
+    [activeTab, projects],
   );
 
   return (
